@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Battleship</title>
+
+    <style>
+        body {
+            background-color: #eccce6;
+            color: white;
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        
+        #game-container {
+            display: flex;
+            justify-content: center;
+            gap: 50px;
+            padding: 20px;
+            margin-top: 20px;
+        }
+        
+        .board-wrapper {
+            text-align: center;
+        }
+        
+        .board {
+            display: grid;
+            grid-template-columns: repeat(5, 40px);
+            gap: 5px;
+            background-color: #e7b4e2;
+            border: 2px solid white;
+            width: max-content;
+            padding: 10px;
+        }
+        
+        .board-cell {
+            width: 40px;
+            height: 40px;
+            background-color: rgb(233, 216, 231);
+            border: 1px solid white;
+        }
+        
+        .board-cell.ship {
+            background-color: rgb(212, 182, 205);
+        }
+        
+        .board-cell.hit {
+            background-color: red;
+        }
+        
+        .board-cell.miss {
+            background-color: white;
+        }
+        
+        h3 {
+            margin-bottom: 10px;
+            font-size: 20px;
+        }
+        
+        </style>
+<script defer src="main.js"></script></head>
+<body>
+    <div id="game-container">
+        <div class="board-wrapper">
+            <h3>You</h3>
+            <div id="player-board" class="board"></div>
+        </div>
+        <div class="board-wrapper">
+            <h3>Opponent</h3>
+            <div id="computer-board" class="board"></div>
+        </div>
+    </div>
+    <button id="start-game-btn">Start Game</button>
+    
+    
+</body>
+</html>
