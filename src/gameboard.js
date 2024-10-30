@@ -1,4 +1,4 @@
-class Gameboard {
+export default class Gameboard {
     constructor() {
         this.ships = [];
         this.missedAttacks = [];
@@ -39,4 +39,3 @@ class Gameboard {
     }
 }
 
-module.exports = Gameboard; 
